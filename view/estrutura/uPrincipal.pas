@@ -8,7 +8,8 @@ uses
   ActnList, Registry, JvComponentBase, JvSerialMaker, Vcl.ActnMan, Vcl.Ribbon,
   Vcl.RibbonLunaStyleActnCtrls, Vcl.ActnCtrls, Vcl.ScreenTips, Vcl.ActnMenus,
   Vcl.RibbonActnMenus, JvExControls, JvButton, JvNavigationPane, Vcl.StdCtrls,
-  Vcl.RibbonActnCtrls, Wwintl, System.Actions, System.ImageList;
+  Vcl.RibbonActnCtrls, Wwintl, System.Actions, System.ImageList,
+  Vcl.RibbonObsidianStyleActnCtrls, Vcl.RibbonSilverStyleActnCtrls;
 
 type
   TfrmPrincipal = class(TForm)
@@ -231,7 +232,7 @@ uDaoSistema, uFuncoesSeguranca, dataCadastros, uCadBancos, uCadCidades,
   uConsReceberGer, uConsCartoes, uConsEstMin, uConsEstNeg, uConsCheques,
   uConsChequesGer, uConsPreVendasGer, uCotacao, uCfgBase, uConfigIni, uAgenda,
   uCadQuadras, uOrdCompra, uCadComandas, uCadMesas, uComandas, uFuncoesVersao,
-  uHorarios, uConstants;
+  uHorarios, uConstants, uFuncoesEstilo;
 
 {$R *.dfm}
 
@@ -326,15 +327,15 @@ begin
   vgCodBarPV := vControl.ReadString('CodBar', 'PV', '');
   vgIDCaixa := vControl.ReadInteger('Caixa', 'ID', 0);
   vgFirst := 1;
-
+  vgStyle := vControl.ReadInteger('Style', 'Style', 0);
   //Contantes ------------------------------------------------------------------
   //Controle de sistema
   ctSystem := vControl.ReadString('Const', 'System', 'Phoenix');
   //Controle de módulo
   ctModulo := 'usm_erp';
-
   vControl.free;
-
+  //Aplica o estilo no sistema
+  LoadStyle(vgStyle);
   {$IFDEF DEBUG}
     frmPrincipal.Caption := ctSystem + ' - Vs. ' + VersaoSistema(0) + ' - (DEBUG)';
     vgCodUsuarioLog := '0';

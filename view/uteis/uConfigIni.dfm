@@ -1,10 +1,9 @@
 inherited frmConfigIni: TfrmConfigIni
   Caption = 'Configurar esta'#231#227'o'
   ClientHeight = 322
-  ClientWidth = 522
-  OnActivate = FormActivate
+  ClientWidth = 570
   OnKeyPress = FormKeyPress
-  ExplicitWidth = 528
+  ExplicitWidth = 576
   ExplicitHeight = 351
   PixelsPerInch = 96
   TextHeight = 13
@@ -117,15 +116,15 @@ inherited frmConfigIni: TfrmConfigIni
     OnClick = sbSalvarClick
   end
   inherited btFechar: TBitBtn
-    Left = 409
+    Left = 457
     Top = 289
-    ExplicitLeft = 409
+    ExplicitLeft = 457
     ExplicitTop = 289
   end
   object PageControl1: TPageControl
     Left = 8
     Top = 8
-    Width = 506
+    Width = 554
     Height = 272
     ActivePage = tsLogs
     TabOrder = 1
@@ -165,6 +164,10 @@ inherited frmConfigIni: TfrmConfigIni
     object tsImagens: TTabSheet
       Caption = 'Imagens'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 498
+      ExplicitHeight = 0
       object Label3: TLabel
         Left = 8
         Top = 8
@@ -244,6 +247,10 @@ inherited frmConfigIni: TfrmConfigIni
     object tsCaixa: TTabSheet
       Caption = 'Caixa'
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 501
+      ExplicitHeight = 0
       object Label8: TLabel
         Left = 8
         Top = 8
@@ -266,6 +273,10 @@ inherited frmConfigIni: TfrmConfigIni
     object tsUsuario: TTabSheet
       Caption = 'Usu'#225'rio'
       ImageIndex = 3
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 498
+      ExplicitHeight = 0
       object Label10: TLabel
         Left = 8
         Top = 8
@@ -303,6 +314,10 @@ inherited frmConfigIni: TfrmConfigIni
     object tsTemp: TTabSheet
       Caption = 'Temp'
       ImageIndex = 4
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 498
+      ExplicitHeight = 0
       object Label12: TLabel
         Left = 8
         Top = 8
@@ -322,6 +337,10 @@ inherited frmConfigIni: TfrmConfigIni
     object tsXML: TTabSheet
       Caption = 'XML'
       ImageIndex = 5
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 498
+      ExplicitHeight = 0
       object Label13: TLabel
         Left = 8
         Top = 8
@@ -341,6 +360,10 @@ inherited frmConfigIni: TfrmConfigIni
     object tsMascaras: TTabSheet
       Caption = 'M'#225'scaras'
       ImageIndex = 6
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 498
+      ExplicitHeight = 0
       object Label14: TLabel
         Left = 8
         Top = 8
@@ -633,6 +656,35 @@ inherited frmConfigIni: TfrmConfigIni
         Sorted = False
         TabOrder = 0
         UnboundDataType = wwDefault
+      end
+    end
+    object tsAparencia: TTabSheet
+      Caption = 'Apar'#234'ncia'
+      ImageIndex = 9
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 498
+      ExplicitHeight = 0
+      object Label9: TLabel
+        Left = 8
+        Top = 8
+        Width = 25
+        Height = 13
+        Caption = 'Estilo'
+      end
+      object cbStyle: TJvComboBox
+        Left = 8
+        Top = 27
+        Width = 145
+        Height = 21
+        EmptyValue = '0'
+        ParentFlat = False
+        TabOrder = 0
+        Text = 'cbStyle'
+        Items.Strings = (
+          'Windows (Padr'#227'o)'
+          'Luna'
+          'Obsidian')
       end
     end
   end

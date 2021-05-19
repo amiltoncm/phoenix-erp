@@ -4,11 +4,11 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, jpeg, ExtCtrls, StdCtrls, Buttons, Inifiles;
+  Dialogs, jpeg, ExtCtrls, StdCtrls, Buttons, Inifiles, Vcl.Imaging.pngimage;
 
 type
   TfrmSenha = class(TForm)
-    Image1: TImage;
+    imgLogin: TImage;
     Label1: TLabel;
     Label2: TLabel;
     edUsuario: TEdit;
@@ -135,7 +135,7 @@ begin
   edSenha.SetFocus;
   btCancelar.Repaint;
   btLogin.Repaint;
-  Image1.Repaint;
+  imgLogin.Repaint;
   frmSenha.Repaint;
 end;
 

@@ -6,7 +6,7 @@ object frmTmpFormNormal: TfrmTmpFormNormal
   Caption = 'frmTmpFormNormal'
   ClientHeight = 223
   ClientWidth = 354
-  Color = clSkyBlue
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

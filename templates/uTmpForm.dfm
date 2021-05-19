@@ -4,7 +4,7 @@ object frmTmpForm: TfrmTmpForm
   Caption = 'frmTmpForm'
   ClientHeight = 308
   ClientWidth = 474
-  Color = clSkyBlue
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

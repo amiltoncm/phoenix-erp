@@ -6,7 +6,7 @@ object frmTmpFormMDI: TfrmTmpFormMDI
   Caption = 'frmTmpFormMDI'
   ClientHeight = 292
   ClientWidth = 601
-  Color = clSkyBlue
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

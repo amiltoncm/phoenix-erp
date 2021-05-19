@@ -10,7 +10,7 @@ uses
 type
   TfrmTmpSenhaMaster = class(TfrmTmpFormNormal)
     btOk: TBitBtn;
-    Image1: TImage;
+    imgLogin: TImage;
     Label1: TLabel;
     edSenhaMaster: TEdit;
     Label2: TLabel;

@@ -301,7 +301,10 @@ uses
   uHorarios in '..\view\uteis\uHorarios.pas' {frmHorarios},
   uDaoHorarios in '..\dao\uDaoHorarios.pas',
   uDaoUsuariosMod in '..\dao\uDaoUsuariosMod.pas',
-  uUsuariosMod in '..\view\cadastros\uUsuariosMod.pas' {frmUsuariosMod};
+  uUsuariosMod in '..\view\cadastros\uUsuariosMod.pas' {frmUsuariosMod},
+  Vcl.Themes,
+  Vcl.Styles,
+  uFuncoesEstilo in '..\funcoes\uFuncoesEstilo.pas';
 
 {$R *.res}
 

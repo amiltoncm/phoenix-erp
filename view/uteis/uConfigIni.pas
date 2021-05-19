@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
   Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uTmpFormNormal, Vcl.StdCtrls,
-  Vcl.Buttons, Vcl.ComCtrls, Inifiles, Vcl.Mask, wwdbedit, Wwdotdot, Wwdbcomb;
+  Vcl.Buttons, Vcl.ComCtrls, Inifiles, Vcl.Mask, wwdbedit, Wwdotdot, Wwdbcomb,
+  JvExStdCtrls, JvCombobox, VCL.Themes, VCL.Styles;
 
 type
   TfrmConfigIni = class(TfrmTmpFormNormal)
@@ -74,6 +75,9 @@ type
     tsCodBar: TTabSheet;
     Label28: TLabel;
     cbCodBarPV: TwwDBComboBox;
+    tsAparencia: TTabSheet;
+    Label9: TLabel;
+    cbStyle: TJvComboBox;
     procedure FormActivate(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure sbSalvarClick(Sender: TObject);
@@ -144,9 +148,11 @@ begin
   cbSSLMethod.ItemIndex := StrToInt(vControl.ReadString('provedor', 'sslmethod', ''));
   cbSSLMode.ItemIndex := StrToInt(vControl.ReadString('provedor', 'sslmode', ''));
   cbUseTLS.ItemIndex := StrToInt(vControl.ReadString('provedor', 'usetls', ''));
-  vControl.Free;
   //Código de barras
   cbCodBarPV.Value := vControl.ReadString('CodBar', 'PV', '0');
+  //Estilo
+  cbStyle.ItemIndex := vControl.ReadInteger('Style', 'Style', 1);
+  vControl.Free;
 end;
 
 procedure TfrmConfigIni.FormKeyPress(Sender: TObject; var Key: Char);
@@ -206,8 +212,10 @@ begin
       //Código de barras
       //PV
       vControl.WriteString('CodBar', 'PV', cbCodBarPV.Value);
-      vgCodBarPV := cbCodBarPV.Value;
+      //Estilo
+      vControl.WriteInteger('Style', 'Style', cbStyle.ItemIndex);
       vControl.Free;
+      vgCodBarPV := cbCodBarPV.Value;
       MessageDlg('Arquivo ini alterado com sucesso!' + #13 + 'É necessário reiniciar o Sistema para as alterações surtirem efeito!', mtInformation, [mbOk], 0);
       Close;
     except

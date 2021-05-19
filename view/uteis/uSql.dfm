@@ -6,7 +6,7 @@ object frmSQL: TfrmSQL
   Caption = 'SQL - Structure Query Language'
   ClientHeight = 261
   ClientWidth = 705
-  Color = clSkyBlue
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

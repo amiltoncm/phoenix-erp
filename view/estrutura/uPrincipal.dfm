@@ -4,7 +4,7 @@
   Caption = 'frmPrincipal'
   ClientHeight = 746
   ClientWidth = 1215
-  Color = clSkyBlue
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -99,10 +99,86 @@
         Caption = #218'teis'
         Page = rbPageUteis
       end>
+    TabIndex = 3
     DesignSize = (
       1215
       143)
-    StyleName = 'Ribbon - Luna'
+    StyleName = 'Ribbon - Silver'
+    object rbPageCad: TRibbonPage
+      Left = 0
+      Top = 50
+      Width = 1214
+      Height = 93
+      Caption = 'Cadastros'
+      Index = 0
+      object rgCadMain: TRibbonGroup
+        Left = 4
+        Top = 3
+        Width = 99
+        Height = 86
+        ActionManager = actManager
+        Caption = 'Pessoas'
+        DialogAction = actCadPessoas
+        GroupIndex = 0
+      end
+      object rgCadProd: TRibbonGroup
+        Left = 105
+        Top = 3
+        Width = 176
+        Height = 86
+        ActionManager = actManager
+        Caption = 'Produtos'
+        DialogAction = actCadProdutos
+        GroupIndex = 1
+      end
+      object rgCadFin: TRibbonGroup
+        Left = 283
+        Top = 3
+        Width = 251
+        Height = 86
+        ActionManager = actManager
+        Caption = 'Financeiro'
+        GroupIndex = 2
+      end
+      object rgCadDiv: TRibbonGroup
+        Left = 536
+        Top = 3
+        Width = 182
+        Height = 86
+        ActionManager = actManager
+        Caption = 'Diversos'
+        GroupIndex = 3
+      end
+      object rgCadCfg: TRibbonGroup
+        Left = 720
+        Top = 3
+        Width = 271
+        Height = 86
+        ActionManager = actManager
+        Caption = 'Configura'#231#245'es'
+        GroupIndex = 4
+      end
+      object rgCadEsp: TRibbonGroup
+        Left = 993
+        Top = 3
+        Width = 87
+        Height = 86
+        ActionManager = actManager
+        Caption = 'Controles'
+        GroupIndex = 5
+        Rows = 2
+      end
+      object rgCadSoccer: TRibbonGroup
+        Left = 1082
+        Top = 3
+        Width = 78
+        Height = 86
+        ActionManager = actManager
+        Caption = 'Soccer'
+        GroupIndex = 6
+        Rows = 1
+      end
+    end
     object rbPageMov: TRibbonPage
       Left = 0
       Top = 50
@@ -250,7 +326,7 @@
       object rgUtCfg: TRibbonGroup
         Left = 4
         Top = 3
-        Width = 301
+        Width = 235
         Height = 86
         Hint = 'Configura'#231#245'es do Sistema'
         ActionManager = actManager
@@ -260,7 +336,7 @@
         Rows = 2
       end
       object rgUtTools: TRibbonGroup
-        Left = 386
+        Left = 320
         Top = 3
         Width = 80
         Height = 86
@@ -272,7 +348,7 @@
         Rows = 2
       end
       object rgUtSistema: TRibbonGroup
-        Left = 468
+        Left = 402
         Top = 3
         Width = 141
         Height = 86
@@ -283,7 +359,7 @@
         Rows = 2
       end
       object rgUtSoccer: TRibbonGroup
-        Left = 307
+        Left = 241
         Top = 3
         Width = 77
         Height = 86
@@ -291,81 +367,6 @@
         Caption = 'Soccer'
         DialogAction = actHorarios
         GroupIndex = 1
-        Rows = 1
-      end
-    end
-    object rbPageCad: TRibbonPage
-      Left = 0
-      Top = 50
-      Width = 1214
-      Height = 93
-      Caption = 'Cadastros'
-      Index = 0
-      object rgCadMain: TRibbonGroup
-        Left = 4
-        Top = 3
-        Width = 99
-        Height = 86
-        ActionManager = actManager
-        Caption = 'Pessoas'
-        DialogAction = actCadPessoas
-        GroupIndex = 0
-      end
-      object rgCadProd: TRibbonGroup
-        Left = 105
-        Top = 3
-        Width = 176
-        Height = 86
-        ActionManager = actManager
-        Caption = 'Produtos'
-        DialogAction = actCadProdutos
-        GroupIndex = 1
-      end
-      object rgCadFin: TRibbonGroup
-        Left = 283
-        Top = 3
-        Width = 251
-        Height = 86
-        ActionManager = actManager
-        Caption = 'Financeiro'
-        GroupIndex = 2
-      end
-      object rgCadDiv: TRibbonGroup
-        Left = 536
-        Top = 3
-        Width = 182
-        Height = 86
-        ActionManager = actManager
-        Caption = 'Diversos'
-        GroupIndex = 3
-      end
-      object rgCadCfg: TRibbonGroup
-        Left = 720
-        Top = 3
-        Width = 271
-        Height = 86
-        ActionManager = actManager
-        Caption = 'Configura'#231#245'es'
-        GroupIndex = 4
-      end
-      object rgCadEsp: TRibbonGroup
-        Left = 993
-        Top = 3
-        Width = 87
-        Height = 86
-        ActionManager = actManager
-        Caption = 'Controles'
-        GroupIndex = 5
-        Rows = 2
-      end
-      object rgCadSoccer: TRibbonGroup
-        Left = 1082
-        Top = 3
-        Width = 78
-        Height = 86
-        ActionManager = actManager
-        Caption = 'Soccer'
-        GroupIndex = 6
         Rows = 1
       end
     end
@@ -3326,11 +3327,6 @@
             Action = actCfgEstacao
             Caption = 'E&sta'#231#227'o de Trabalho'
             ImageIndex = 35
-          end
-          item
-            Action = actConfig
-            Caption = 'S&istema'
-            ImageIndex = 11
           end>
         ActionBar = rgUtCfg
       end
@@ -3497,7 +3493,7 @@
     Images = Imagens16
     Left = 96
     Top = 320
-    StyleName = 'Ribbon - Luna'
+    StyleName = 'Ribbon - Silver'
     object actCadPessoas: TAction
       Category = 'Cadastros'
       Caption = 'Pessoas (F2)'

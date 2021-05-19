@@ -25,6 +25,8 @@ vgIDCaixa: Integer;
 //Variável de controle para executar a primeira vez que entra no sistema -------
 vgFirst: Integer;
 
+vgStyle: Integer;
+
 //Imagens ----------------------------------------------------------------------
 vgLogoRel: String;
 

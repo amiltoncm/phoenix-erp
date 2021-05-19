@@ -6,7 +6,7 @@ object frmTecladoVirtual: TfrmTecladoVirtual
   Caption = 'Teclado Virtual'
   ClientHeight = 223
   ClientWidth = 573
-  Color = clSkyBlue
+  Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

@@ -19,13 +19,13 @@ type
     lbSerial: TLabel;
     lbID: TLabel;
     lbDtFile: TLabel;
-    Image: TImage;
+    imgWindows: TImage;
     lbSQL: TLabel;
     procedure OKButtonClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
-    procedure ImageClick(Sender: TObject);
+    procedure imgWindowsClick(Sender: TObject);
     procedure ImgBaseClick(Sender: TObject);
     procedure lbSQLDblClick(Sender: TObject);
     procedure ImgSobreDblClick(Sender: TObject);
@@ -94,7 +94,7 @@ begin
     close;
 end;
 
-procedure TfrmSobre.ImageClick(Sender: TObject);
+procedure TfrmSobre.imgWindowsClick(Sender: TObject);
 begin
   ShellExecute(Handle, 'OPEN', Pchar('www.microsoft.com.br'), nil, nil,
     sw_ShowNormal);
