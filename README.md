@@ -4,7 +4,7 @@ Linguagem / IDE: Delphi 10.3.3 (Rio)
 Banco de Dados: PostgreSQL 9.6
 
 ERP modular desenvolvido para atingir vários segmentos, engloba vários funcionalidades, entre elas 
-movimentação fincaneira (entradas, saídas e transferências), orçamentos, pré-vendas, movimentação de estoque, etc.. 
+movimentação financeira (entradas, saídas e transferências), orçamentos, pré-vendas, movimentação de estoque, etc.. 
 
 Em uma de suas especializações faz comunicação com o Deliveri via API.
 
